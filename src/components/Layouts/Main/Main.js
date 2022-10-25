@@ -7,7 +7,6 @@ const Main = () => {
   return (
     <div>
       <Header></Header>
-      this is header
       <div class="flex flex-wrap -mx-5 overflow-hidden md:-mx-5 ">
         <div class="my-5 px-5 w-full overflow-hidden sm:w-1/2 md:w-1/6 bg-green-400">
           <Sidebar></Sidebar>
