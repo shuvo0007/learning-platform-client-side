@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Sidebar = () => {
+const Cards = () => {
   return (
     <div>
-      this is sidebar
+      this is content
     </div>
   );
 };
 
-export default Sidebar;
+export default Cards;
