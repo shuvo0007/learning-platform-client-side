@@ -12,7 +12,7 @@ const Main = () => {
           <Sidebar></Sidebar>
         </div>
 
-        <div class="my-5 px-5 w-full overflow-hidden sm:w-1/2 md:w-5/6 bg-red-400">
+        <div class="my-5 px-5 w-full overflow-hidden sm:w-1/2 md:w-5/6 ">
           <Outlet></Outlet>
         </div>
 

@@ -1,9 +1,10 @@
 import React from 'react';
 
-const CourseCard = () => {
+const CourseCard = (cardDetails) => {
+  
   return (
     <div>
-      
+      <img src={cardDetails.image} alt="" />
     </div>
   );
 };
