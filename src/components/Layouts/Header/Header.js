@@ -5,7 +5,7 @@ const Header = () => {
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-          <a href="https://flowbite.com" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img
               src="https://cdn-icons-png.flaticon.com/512/7133/7133597.png"
               className="mr-3 h-6 sm:h-9"

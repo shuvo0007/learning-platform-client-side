@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Cards = () => {
+const CourseCard = () => {
   return (
     <div>
-      this is content
+      
     </div>
   );
 };
 
-export default Cards;
+export default CourseCard;
