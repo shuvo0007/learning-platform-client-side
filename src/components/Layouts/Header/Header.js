@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import { FaRegUser } from "react-icons/fa";
+import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
+import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -103,15 +105,22 @@ const Header = () => {
                   </span>
                 </a>
               </li>
-              <li>
-                <a
-                  href="/"
-                  className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
-                >
-                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    (Toggle Theme Button)
-                  </span>
-                </a>
+              <li className="flex">
+                <div class="flex items-center justify-center w-full mb-12">
+                  <MdOutlineLightMode></MdOutlineLightMode>
+                  <label
+                    for="toggleB"
+                    class="flex items-center cursor-pointer ml-2"
+                  >
+                    <div class="relative">
+                      <input type="checkbox" id="toggleB" class="sr-only" />
+                      <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                      <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                    </div>
+                    <div class="ml-3 text-gray-700 font-medium"></div>
+                    <MdOutlineNightlight></MdOutlineNightlight>
+                  </label>
+                </div>
               </li>
             </ul>
           </div>

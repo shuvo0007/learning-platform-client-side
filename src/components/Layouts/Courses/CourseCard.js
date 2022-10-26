@@ -20,7 +20,7 @@ const CourseCard = (getCardDetails) => {
   return (
     <div className="">
       <div class="flex flex-wrap -mx-1 overflow-hidden md:-mx-2">
-        <div class=" flex flex-col items-center  my-1 px-1 w-full overflow-hidden md:my-2 md:px-2 md:w-2/3 border-2 border-gray-700 shadow-md shadow-gray-900">
+        <div class="bg-neutral-300 rounded-md flex flex-col items-center  my-1 px-1 w-full overflow-hidden md:my-2 md:px-2 md:w-2/3 border-2 border-gray-700 shadow-md shadow-gray-900">
           <h2 className="text-4xl m-10">{cardDetails.name}</h2>
           <img className="w-screen" src={cardDetails.image} alt="" />
           <p className="px-20 py-10 text-xl text-justify">
