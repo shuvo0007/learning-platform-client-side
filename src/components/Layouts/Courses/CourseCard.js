@@ -12,7 +12,7 @@ const CourseCard = (getCardDetails) => {
             {cardDetails.details}
           </p>
         </div>
-
+        
         <div class="my-1 w-full overflow-hidden md:w-1/3 text-2xl p-24">
           <img
             className="rounded-full w-24 mb-5"
