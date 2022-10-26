@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -22,6 +25,7 @@ const Header = () => {
             >
               Login
             </a>
+            <p>{user?.displayName}</p>
             <a
               href="/"
               className="border-2 border-red-400 p-2 rounded-lg mx-2 text-base font-medium text-blue-600 dark:text-blue-500 hover:bg-red-500 hover:text-white"
