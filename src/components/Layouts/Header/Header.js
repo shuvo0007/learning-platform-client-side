@@ -9,9 +9,7 @@ const Header = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {
-
-      })
+      .then(() => {})
       .catch((error) => console.log(error));
   };
 
@@ -32,7 +30,7 @@ const Header = () => {
 
           {/* log in checking if logged in then show name and photo otherwise show login and register button  */}
           <div className="flex items-center">
-            {user ? (
+            {user?.uid ? (
               <div className="flex items-center">
                 <p className="m-5 text-xl">{user?.displayName}</p>
                 {user.photoURL ? (
@@ -42,27 +40,27 @@ const Header = () => {
                       src={user.photoURL}
                       alt=""
                     />
-                    <button
-                      onClick={handleLogOut}
-                      type="button"
-                      className="mx-5 text-lg text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
-                    >
-                      LogOut
-                    </button>
                   </>
                 ) : (
                   <FaRegUser className=""></FaRegUser>
                 )}
+                <button
+                  onClick={handleLogOut}
+                  type="button"
+                  className="mx-5 text-lg text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                  LogOut
+                </button>
               </div>
             ) : (
               <>
                 <Link to={"/login"}>
-                  <Button className="border-2 border-red-400 p-2 rounded-lg mx-2 text-base  font-medium text-blue-600 dark:text-blue-500 hover:bg-red-500 hover:text-white">
+                  <Button className="border-2 border-red-400 p-2 rounded-lg mx-2 text-base  font-medium text-white dark:text-blue-500 hover:bg-red-500 hover:text-white">
                     Login
                   </Button>
                 </Link>
                 <Link to={"/registration"}>
-                  <Button className="border-2 border-red-400 p-2 rounded-lg mx-2 text-base font-medium text-blue-600 dark:text-blue-500 hover:bg-red-500 hover:text-white">
+                  <Button className="border-2 border-red-400 p-2 rounded-lg mx-2 text-base font-medium text-white dark:text-blue-500 hover:bg-red-500 hover:text-white">
                     Registration
                   </Button>
                 </Link>
