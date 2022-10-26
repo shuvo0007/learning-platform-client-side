@@ -1,6 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+const showTowst = () => {
+  toast.success("🦄 Wow so easy!", {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });
+};
 const CourseCard = (getCardDetails) => {
   const cardDetails = getCardDetails.details;
   return (
@@ -23,8 +37,23 @@ const CourseCard = (getCardDetails) => {
           <p className="mb-10">Instructor Name: {cardDetails.instructor}</p>
           <p className="mb-10">Course Duration: {cardDetails.duration}</p>
           <p className="mb-10"> Course Price: {cardDetails.price}</p>
-          <Link to={`/courses/private/${cardDetails.id}`}>
+          <Link
+            to={`/courses/private/${cardDetails.id}`}
+            onClick={() => showTowst()}
+          >
             <button className="bg-blue-500 rounded-lg p-5">Buy Course</button>
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+            />
           </Link>
         </div>
       </div>
