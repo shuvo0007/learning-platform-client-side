@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseCard = (getCardDetails) => {
   const cardDetails = getCardDetails.details;
@@ -12,7 +13,7 @@ const CourseCard = (getCardDetails) => {
             {cardDetails.details}
           </p>
         </div>
-        
+
         <div class="my-1 w-full overflow-hidden md:w-1/3 text-2xl p-24">
           <img
             className="rounded-full w-24 mb-5"
@@ -22,7 +23,9 @@ const CourseCard = (getCardDetails) => {
           <p className="mb-10">Instructor Name: {cardDetails.instructor}</p>
           <p className="mb-10">Course Duration: {cardDetails.duration}</p>
           <p className="mb-10"> Course Price: {cardDetails.price}</p>
-          <button className="bg-blue-500 rounded-lg p-5">Buy Course</button>
+          <Link to={`/courses/private/${cardDetails.id}`}>
+            <button className="bg-blue-500 rounded-lg p-5">Buy Course</button>
+          </Link>
         </div>
       </div>
     </div>
