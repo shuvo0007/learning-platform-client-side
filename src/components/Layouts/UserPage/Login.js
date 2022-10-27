@@ -6,6 +6,9 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import Header from "../Header/Header";
 
 const Login = () => {
+
+  
+
   const { providerLogin, signIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const navigate = useNavigate();

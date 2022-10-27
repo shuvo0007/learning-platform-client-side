@@ -37,26 +37,29 @@ const CourseCard = (getCardDetails) => {
           <p className="mb-10">Instructor Name: {cardDetails.instructor}</p>
           <p className="mb-10">Course Duration: {cardDetails.duration}</p>
           <p className="mb-10"> Course Price: {cardDetails.price}</p>
-          <Link
-            to={`/courses/private/${cardDetails.id}`}
-            onClick={() => showTowst()}
-          >
-            <button className="bg-amber-500 rounded-lg p-5 text-white">
+
+          <button>
+            <Link
+              className="bg-amber-500 rounded-lg p-5 text-white"
+              to={`/courses/private/${cardDetails.id}`}
+              onClick={() => showTowst()}
+            >
               Get premium access
-            </button>
-            <ToastContainer
-              position="top-center"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="colored"
-            />
-          </Link>
+            </Link>
+          </button>
+
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+          />
         </div>
       </div>
     </div>
