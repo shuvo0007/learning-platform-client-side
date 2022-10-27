@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Courses from "../Layouts/Courses/Courses";
 import Home from "../Layouts/Home/Home";
 import Main from "../Layouts/Main/Main";
+import Blog from "../Layouts/Blog/Blog";
 import Private from "../Layouts/Private/Private";
 import Login from "../Layouts/UserPage/Login";
 import Registration from "../Layouts/UserPage/Registration";
@@ -10,9 +11,6 @@ export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    children:[
-      
-    ],
     loader: () => fetch(`http://localhost:5000/category`),
   },
   {
@@ -37,7 +35,7 @@ export const routes = createBrowserRouter([
       },
     ],
   },
-  
+
   {
     path: "/login",
     element: <Login></Login>,
@@ -45,5 +43,9 @@ export const routes = createBrowserRouter([
   {
     path: "/registration",
     element: <Registration></Registration>,
+  },
+  {
+    path: "/blog",
+    element: <Blog></Blog>,
   },
 ]);
