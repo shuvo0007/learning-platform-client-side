@@ -3,6 +3,7 @@ import Courses from "../Layouts/Courses/Courses";
 import Home from "../Layouts/Home/Home";
 import Main from "../Layouts/Main/Main";
 import Blog from "../Layouts/Blog/Blog";
+import Error404 from "../Layouts/Errors/Error404";
 import Private from "../Layouts/Private/Private";
 import Login from "../Layouts/UserPage/Login";
 import Registration from "../Layouts/UserPage/Registration";
@@ -47,5 +48,9 @@ export const routes = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog></Blog>,
+  },
+  {
+    path: "/*",
+    element: <Error404></Error404>
   },
 ]);
