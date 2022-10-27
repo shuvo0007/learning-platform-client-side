@@ -12,7 +12,7 @@ export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    loader: () => fetch(`http://localhost:5000/category`),
+    loader: () => fetch(`https://b610-lerning-platform-server-side-shuvo0007.vercel.app/category`),
   },
   {
     path: "/courses",
@@ -22,7 +22,7 @@ export const routes = createBrowserRouter([
         path: "/courses/:id",
         element: <Courses></Courses>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(`https://b610-lerning-platform-server-side-shuvo0007.vercel.app/category/${params.id}`),
       },
       {
         path: "/courses/private/:id",
@@ -32,7 +32,7 @@ export const routes = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(`https://b610-lerning-platform-server-side-shuvo0007.vercel.app/category/${params.id}`),
       },
     ],
   },
