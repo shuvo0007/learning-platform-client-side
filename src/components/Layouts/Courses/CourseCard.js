@@ -50,7 +50,7 @@ const CourseCard = (getCardDetails) => {
           </p>
         </div>
 
-        {/* instractor info and premium access */}
+        {/* instructor info and premium access */}
         <div
           id="content"
           class="my-1 w-full overflow-hidden md:w-1/3 text-2xl p-24"

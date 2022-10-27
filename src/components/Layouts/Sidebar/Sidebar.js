@@ -7,7 +7,9 @@ const Sidebar = () => {
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch(
+      "https://b610-lerning-platform-server-side-shuvo0007.vercel.app/category"
+    )
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, []);
