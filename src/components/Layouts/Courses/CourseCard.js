@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const showTowst = () => {
-  toast.success("🦄 Wow so easy!", {
+  toast.success("Premium Purchase Successful", {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
@@ -41,7 +41,9 @@ const CourseCard = (getCardDetails) => {
             to={`/courses/private/${cardDetails.id}`}
             onClick={() => showTowst()}
           >
-            <button className="bg-blue-500 rounded-lg p-5">Buy Course</button>
+            <button className="bg-yellow-400 rounded-lg p-5 text-white">
+              Get premium access
+            </button>
             <ToastContainer
               position="top-center"
               autoClose={5000}

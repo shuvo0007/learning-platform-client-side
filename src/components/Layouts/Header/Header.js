@@ -36,15 +36,23 @@ const Header = () => {
               <div className="flex items-center">
                 <p className="m-5 text-xl">{user?.displayName}</p>
                 {user.photoURL ? (
-                  <>
+                  <div
+                    className="tooltip tooltip-bottom"
+                    data-tip={user?.displayName}
+                  >
                     <img
                       className="rounded-full w-16"
                       src={user.photoURL}
                       alt=""
                     />
-                  </>
+                  </div>
                 ) : (
-                  <FaRegUser className=""></FaRegUser>
+                  <div
+                    className="tooltip tooltip-bottom"
+                    data-tip={user?.displayName}
+                  >
+                    <FaRegUser className=""></FaRegUser>
+                  </div>
                 )}
                 <button
                   onClick={handleLogOut}
