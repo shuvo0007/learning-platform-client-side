@@ -1,19 +1,16 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import Header from "../Header/Header";
 
 const Login = () => {
-
-  
+  const [error, setError] = useState("");
 
   const { providerLogin, signIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
   const handleGoogleSignIn = () => {
     providerLogin(googleProvider)
       .then((result) => {
@@ -23,6 +20,10 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -31,10 +32,18 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+        setError("");
 
         navigate(from, { replace: true });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        if (error.code === "auth/wrong-password") {
+          setError("The EMAIL or PASSWORD you entered is wrong");
+        } else {
+          setError(error.message);
+        }
+      });
   };
 
   return (
@@ -88,6 +97,9 @@ const Login = () => {
                   >
                     Sign in
                   </button>
+
+                  <div className="text-red-600">{error}</div>
+
                   <div class="flex items-center justify-center space-x-2 my-5">
                     <span class="h-px w-1/3 bg-gray-500"></span>
                     <span class="text-gray-700 font-normal">or</span>
