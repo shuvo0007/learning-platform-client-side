@@ -5,7 +5,7 @@ const Card = ({ course }) => {
   return (
     <div className=" w-96 flex flex-col overflow-hidden border-2 border-sky-500 rounded-lg mb-10 bg-white">
       <img className="h-64" src={course.image} alt="" />
-      <p className="text-2xl text-justify p-5">
+      <p className="text-2xl text-justify p-5 text-black">
         {course.details.slice(0, 100) + "..."}
       </p>
       <Link to={`/courses/${course.id}`}>

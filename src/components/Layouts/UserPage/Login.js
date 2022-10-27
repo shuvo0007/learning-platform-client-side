@@ -28,6 +28,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+
         navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
@@ -35,10 +36,10 @@ const Login = () => {
 
   return (
     <div>
-      <Header></Header>
       <div className="">
-        <section class="bg-blue-300 dark:bg-gray-900">
-          <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <section class="bg-blue-300 dark:bg-gray-900 h-screen">
+          <Header></Header>
+          <div class="flex flex-col items-center justify-center px-16 md:px-6 md:pt-32 pt-28">
             {/* log in form div  */}
             <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div class="p-6 space-y-4 md:space-y-6 sm:p-8 ">

@@ -1,17 +1,17 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Header from '../Header/Header';
-import Cards from './Cards'
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Header from "../Header/Header";
+import Cards from "./Cards";
 
 const Home = () => {
   const allCourses = useLoaderData();
   return (
     <div>
       <Header></Header>
-      <div className='grid grid-cols-3 gap-4 px-96 pt-16'>
-        {
-          allCourses.map(course => <Cards key={course.id} course={course}></Cards>)
-        }
+      <div className="md:grid md:grid-cols-3 md:gap-4 md:pl-72 md:pr-52 md:pt-16 flex flex-col justify-center items-center pt-10">
+        {allCourses.map((course) => (
+          <Cards key={course.id} course={course}></Cards>
+        ))}
       </div>
     </div>
   );
