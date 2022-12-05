@@ -1,8 +1,8 @@
 Project Name: Digital Educations
 
-Client-side code github repository: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-shuvo0007
+Client-side code github repository: https://github.com/shuvo0007/learning-platform-client-side
 
-Server-side code github repository: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-shuvo0007
+Server-side code github repository: https://github.com/shuvo0007/lerning-platform-server-side
 
 Live website link: https://digital-educations.web.app/
 
